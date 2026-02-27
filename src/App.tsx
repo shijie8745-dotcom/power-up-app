@@ -1,8 +1,8 @@
 import './App.css'
-import { TestApp } from './App.test'
+import { SimpleApp } from './App.simple'
 
 function App() {
-  return <TestApp />
+  return <SimpleApp />
 }
 
 export default App
