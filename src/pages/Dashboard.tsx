@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Card, Button, ProgressBar } from '../components/common';
@@ -466,12 +467,14 @@ const Dashboard = () => {
   }, []);
 
   // Handlers
+  const navigate = useNavigate();
+
   const handleStarJarClick = () => {
     alert('🎉 你总共有42颗星星！继续加油！');
   };
 
   const handleTextbookClick = (textbook: any) => {
-    alert(`即将进入 ${textbook.title} 详情页`);
+    navigate(`/textbook/${textbook.id}`);
   };
 
   const handleLessonClick = (lesson: any) => {
