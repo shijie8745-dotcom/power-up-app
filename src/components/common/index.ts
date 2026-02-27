@@ -13,3 +13,6 @@ export type { TabProps, TabItem } from './Tab';
 
 export { ToastProvider, useToast } from './Toast';
 export type { ToastType, ToastItem } from './Toast';
+
+export { BottomNav } from './BottomNav';
+export type { NavItem, BottomNavProps } from './BottomNav';

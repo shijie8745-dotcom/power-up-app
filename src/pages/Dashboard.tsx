@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { Card, Button, ProgressBar } from '../components/common';
+import { Card, Button, ProgressBar, BottomNav } from '../components/common';
 
 // Mock data imports
 import { textbooks } from '../data';
@@ -481,9 +481,9 @@ const Dashboard = () => {
     alert(`继续学习：${lesson.title}`);
   };
 
-  const handlePetClick = () => {
-    setPetDancing(true);
-    setTimeout(() => setPetDancing(false), 500);
+  const handleFavoritesClick = () => {
+    // Add favorites button click handler
+    navigate('/favorites');
   };
 
   // Render stars
@@ -638,6 +638,8 @@ const Dashboard = () => {
           <ExpText>75/100 EXP</ExpText>
         </PetCard>
       </VirtualPet>
+
+      <BottomNav />
     </Container>
   );
 };
