@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './',  // 添加这行确保相对路径正确
+  base: '/power-up-app/',  // GitHub Pages 仓库路径
 })
