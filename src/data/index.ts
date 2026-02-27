@@ -470,6 +470,28 @@ Playing is fun!`,
       { word: 'fun', translation: '有趣的', pronunciation: '/fʌn/' },
     ],
   },
+  {
+    id: 'pu1-u4-p3',
+    lessonId: 'pu1-u4',
+    pageNumber: 18,
+    englishText: `Let's play together!
+Can you share your toys?
+Yes, I can share my ball.
+Thank you! You're welcome.
+Sharing is fun!`,
+    chineseText: `我们一起玩吧！
+你能分享你的玩具吗？
+是的，我可以分享我的球。
+谢谢！不客气。
+分享很有趣！`,
+    words: [
+      { word: 'together', translation: '一起', pronunciation: '/təˈɡeðər/' },
+      { word: 'share', translation: '分享', pronunciation: '/ʃer/' },
+      { word: 'can', translation: '能', pronunciation: '/kæn/' },
+      { word: 'thank you', translation: '谢谢', pronunciation: '/θæŋk juː/' },
+      { word: 'welcome', translation: '不客气', pronunciation: '/ˈwelkəm/' },
+    ],
+  },
 
   // Power Up 1 - Unit 5: Food
   {
