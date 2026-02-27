@@ -1,6 +1,6 @@
 import type { DefaultTheme } from 'styled-components';
 
-export const theme: DefaultTheme = {
+export const theme = {
   colors: {
     primary: '#4A90E2',
     yellow: '#FFD93D',
@@ -39,7 +39,7 @@ export const theme: DefaultTheme = {
     tablet: '1024px',
     desktop: '1200px',
   },
-};
+} as DefaultTheme;
 
 declare module 'styled-components' {
   export interface DefaultTheme {
