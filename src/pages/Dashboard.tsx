@@ -470,7 +470,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   const handleStarJarClick = () => {
-    alert('🎉 你总共有42颗星星！继续加油！');
+    navigate('/stats');
   };
 
   const handleTextbookClick = (textbook: any) => {

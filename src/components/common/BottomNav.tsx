@@ -94,7 +94,7 @@ const defaultNavItems: NavItem[] = [
   { id: 'home', label: '首页', icon: '🏠', path: '/' },
   { id: 'favorites', label: '收藏', icon: '⭐', path: '/favorites' },
   { id: 'stats', label: '统计', icon: '📊', path: '/stats' },
-  { id: 'profile', label: '我的', icon: '👤', path: '/profile' },
+  { id: 'more', label: '更多', icon: '⚙️', path: '/more' },
 ];
 
 export const BottomNav: React.FC<BottomNavProps> = ({ items = defaultNavItems }) => {
