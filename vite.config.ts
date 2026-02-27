@@ -10,10 +10,7 @@ export default defineConfig({
     cssCodeSplit: false,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'framer-motion-vendor': ['framer-motion']
-        }
+        manualChunks: undefined // 禁用代码分割
       }
     }
   },
