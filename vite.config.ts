@@ -10,7 +10,7 @@ export default defineConfig({
     cssCodeSplit: false,
     rollupOptions: {
       output: {
-        manualChunks: undefined // 禁用代码分割
+        manualChunks: undefined
       }
     }
   },
