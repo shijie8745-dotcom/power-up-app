@@ -458,7 +458,7 @@ const AnimatedNumber = ({ value, duration = 1000 }: { value: number; duration?: 
 
 // Dashboard Component
 const Dashboard = () => {
-  const [petDancing, setPetDancing] = useState(false);
+  const [petDancing] = useState(false);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -481,9 +481,9 @@ const Dashboard = () => {
     alert(`继续学习：${lesson.title}`);
   };
 
-  const handleFavoritesClick = () => {
-    // Add favorites button click handler
-    navigate('/favorites');
+  const handlePetClick = () => {
+    // Pet interaction handler
+    alert('Mochi很开心！继续加油学习吧！🐱');
   };
 
   // Render stars

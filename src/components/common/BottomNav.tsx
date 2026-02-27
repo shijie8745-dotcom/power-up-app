@@ -111,8 +111,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ items = defaultNavItems })
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: 'spring', stiffness: 280, damping: 30, delay: 0.2 }}
-        exit={{ y: 100, opacity: 0 }}
-        transitionExit={{ duration: 0.3, ease: 'easeIn' }}
+        exit={{ y: 100, opacity: 0, transition: { duration: 0.3, ease: 'easeIn' } }}
       >
         <NavList>
           {items.map((item, index) => {

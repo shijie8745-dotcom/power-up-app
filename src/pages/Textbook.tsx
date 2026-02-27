@@ -383,14 +383,14 @@ const UnitVariants = {
     transition: {
       delay: i * 0.1,
       duration: 0.5,
-      ease: "easeOut"
+      ease: "easeOut" as const
     }
   }),
   locked: {
     opacity: 0.7,
-    pointerEvents: 'none'
+    pointerEvents: 'none' as const
   }
-};
+} as const;
 
 const HeaderVariants = {
   hidden: { opacity: 0, y: -30 },
@@ -399,10 +399,10 @@ const HeaderVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut"
+      ease: "easeOut" as const
     }
   }
-};
+} as const;
 
 const StarVariants = {
   initial: { scale: 0, rotate: -180 },
@@ -410,7 +410,7 @@ const StarVariants = {
     scale: 1,
     rotate: 0,
     transition: {
-      type: "spring",
+      type: "spring" as const,
       stiffness: 260,
       damping: 20
     }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
+import type { Badge as BadgeType } from '../types';
 import { Card, ProgressBar } from '../components/common';
 import { studyStats, badges as initialBadges, userLevel, learningPet as petData } from '../data';
 
@@ -54,7 +55,7 @@ const pageVariants = {
       delayChildren: 0.2,
     },
   },
-};
+} as const;
 
 const cardVariants = {
   initial: { y: 20, opacity: 0 },
@@ -62,12 +63,12 @@ const cardVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      type: 'spring',
+      type: 'spring' as const,
       stiffness: 260,
       damping: 20,
     },
   },
-};
+} as const;
 
 const badgeVariants = {
   initial: { scale: 0, opacity: 0 },
@@ -75,7 +76,7 @@ const badgeVariants = {
     scale: 1,
     opacity: 1,
     transition: {
-      type: 'spring',
+      type: 'spring' as const,
       stiffness: 300,
       damping: 20,
     },
@@ -84,12 +85,12 @@ const badgeVariants = {
     scale: 1.1,
     y: -5,
     transition: {
-      type: 'spring',
+      type: 'spring' as const,
       stiffness: 400,
       damping: 10,
     },
   },
-};
+} as const;
 
 // 使用styled-components创建样式
 const Container = styled(motion.div)`
@@ -193,13 +194,6 @@ const SectionTitle = styled.h2`
 
 const ChartContainer = styled(Card)`
   padding: 24px;
-`;
-
-const ChartTitle = styled.h3`
-  font-size: 18px;
-  color: ${({ theme }) => theme.colors.text};
-  margin-bottom: 20px;
-  text-align: center;
 `;
 
 const Chart = styled.div`
@@ -505,7 +499,7 @@ const AnimatedCounter = ({ value, duration = 2000 }: { value: number; duration?:
 };
 
 const Stats = () => {
-  const [selectedBadge, setSelectedBadge] = useState<(Badge & { unlocked?: boolean }) | null>(null);
+  const [selectedBadge, setSelectedBadge] = useState<(BadgeType & { unlocked?: boolean }) | null>(null);
   const [hoveredBar, setHoveredBar] = useState<string | null>(null);
 
   // 准备图表数据（最近7天）
@@ -514,7 +508,6 @@ const Stats = () => {
 
   // 计算升级到下一级需要的经验
   const expToNextLevel = Math.max(0, userLevel.maxExp - userLevel.currentExp);
-  const percentageToNextLevel = (userLevel.currentExp / userLevel.maxExp) * 100;
 
   // 获取宠物心情文本
   const getMoodText = (mood: string) => {
