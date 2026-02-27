@@ -4,11 +4,11 @@ import Textbook from './pages/Textbook'
 import Lesson from './pages/Lesson'
 import Favorites from './pages/Favorites'
 import Stats from './pages/Stats'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/textbook/:id" element={<Textbook />} />
@@ -16,7 +16,7 @@ function App() {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/stats" element={<Stats />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
